@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
 	id 'java'
 	id 'eclipse'
 }
@@ -8,7 +8,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'com.mgic.rules'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 repositories {
 mavenCentral()
@@ -29,7 +29,13 @@ dependencies {
 	 compile group: 'org.jbpm', name: 'jbpm-flow', version: '7.2.0.Final'
 	 compile group: 'org.jbpm', name: 'jbpm-flow-builder', version: '7.2.0.Final'
 	 compile group: 'org.jbpm', name: 'jbpm-bpmn2', version: '7.2.0.Final'
+	 compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
 
 	 implementation 'org.springframework.boot:spring-boot-starter-web'
+	 implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix:2.2.2.RELEASE'
+	 implementation 'org.springframework.cloud:spring-cloud-starter-sleuth:2.2.2.RELEASE'
+	 implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.2.2.RELEASE'
+	 implementation 'org.springframework.cloud:spring-cloud-starter-config:2.2.2.RELEASE'
+	
 	 testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
