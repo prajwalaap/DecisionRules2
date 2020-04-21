@@ -1,0 +1,35 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+	id 'eclipse'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.mgic.rules'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+mavenCentral()
+}
+
+dependencies {
+
+	 compile fileTree(dir: 'libs', include: ['*.jar'])
+	 compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+	 compile group: 'commons-io', name: 'commons-io', version: '2.6'
+	 compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
+	 compile group: 'org.kie', name: 'kie-api', version: '7.2.0.Final'
+	 compile group: 'org.kie', name: 'kie-internal', version: '7.2.0.Final'
+	 compile group: 'org.kie', name: 'kie-spring', version: '7.2.0.Final'
+	 compile group: 'org.drools', name: 'drools-core', version: '7.2.0.Final'
+	 compile group: 'org.drools', name: 'drools-compiler', version: '7.2.0.Final'  
+	 compile group: 'org.drools', name: 'drools-workbench-models-guided-dtable', version: '7.2.0.Final'
+	 compile group: 'org.jbpm', name: 'jbpm-flow', version: '7.2.0.Final'
+	 compile group: 'org.jbpm', name: 'jbpm-flow-builder', version: '7.2.0.Final'
+	 compile group: 'org.jbpm', name: 'jbpm-bpmn2', version: '7.2.0.Final'
+
+	 implementation 'org.springframework.boot:spring-boot-starter-web'
+	 testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
