@@ -4,7 +4,7 @@ package com.mgic.rules.decision.rest;
 //import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-//import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,7 @@ import com.mgic.rules.services.DecisionRulesService;
 
 
 @RestController
+@RequestMapping("/decision")
 public class DecisionRulesRest
 {
 
